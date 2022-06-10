@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dashboard_Operario</title>
+	<link rel="stylesheet" href="css/sistSeguridad.css">
+    <link href="css/sidebars.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+	
+	<div class="container-fluid">
+	  <div class="row backTotal">
+	    <div class="col-sm-2 navCol">
+        <!-- seccion navegación -->
+            <div class="row">
+              <div class="col-12">
+                   <nav class="navbar-nav flex-column">
+                       <div class="flex-shrink-0">
+                           <a class="navbar-brand" href="#"><img src="images/Logologo.png" width="210" height="87" alt=""/></a>
+                           
+                           <ul class="list-unstyled" style="margin-top: 2em;">
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed text-white" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg>
+          PROCEDIMIENTOS
+        </button>
+        <div class="collapse show" id="home-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="tabla_pendientes.html" class="link-dark rounded text-white-50">Pendientes</a></li>
+            <li><a href="tabla_enproceso.html" class="link-dark rounded text-white-50">En Proceso</a></li>
+            <li><a href="tabla_finalizado.html" class="link-dark rounded text-white-50">Finalizados</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <a href="nuevo_procedimiento.html" class="btn btn-toggle align-items-left rounded text-white">
+          CREAR NUEVO PROCEDIMIENTO
+        </a>
+       <!-- <div class="collapse" id="dashboard-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded text-white">Overview</a></li>
+            <li><a href="#" class="link-dark rounded text-white">Weekly</a></li>
+            <li><a href="#" class="link-dark rounded text-white">Monthly</a></li>
+            <li><a href="#" class="link-dark rounded text-white">Annually</a></li>
+          </ul>
+        </div> -->
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-left rounded collapsed text-white" data-bs-toggle="collapse" data-bs-target="#inspector-collapse" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg>
+          INSPECTORES
+        </button>
+        <div class="collapse" id="inspector-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded text-white-50">Agregar Nuevo</a></li>
+            <li><a href="#" class="link-dark rounded text-white-50">Listado Completo</a></li>
+          </ul>
+        </div>
+      </li>
+     <li class="mb-1">
+        <button class="btn btn-toggle align-items-left rounded collapsed text-white" data-bs-toggle="collapse" data-bs-target="#movil-collapse" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg>
+          MÓVILES
+        </button>
+        <div class="collapse" id="movil-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded text-white-50">Agregar Nuevo</a></li>
+            <li><a href="#" class="link-dark rounded text-white-50">Listado Completo</a></li>
+          </ul>
+        </div>
+      </li>
+    <li class="mb-1">
+        <button class="btn btn-toggle align-items-left rounded collapsed text-white" data-bs-toggle="collapse" data-bs-target="#turno-collapse" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg>
+          TURNOS
+        </button>
+        <div class="collapse" id="turno-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded text-white-50">Agregar/Quitar Inspector</a></li>
+            <li><a href="#" class="link-dark rounded text-white-50">Agregar/Quitar Móvil</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="border-top my-3"></li>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+          Account
+        </button>
+        <div class="collapse" id="account-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded">New...</a></li>
+            <li><a href="#" class="link-dark rounded">Profile</a></li>
+            <li><a href="#" class="link-dark rounded">Settings</a></li>
+            <li><a href="#" class="link-dark rounded">Sign out</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+                           
+
+                     </div>
+                   </nav>
+              </div>
+            </div>
+          
+        </div>
+          
+          <!-- inicio dashboard -->	
+	    <div class="col-sm-10 dashCont">
+			
+		<!-- seccion usuario + buscador -->	
+			<div class="row align-items-start">
+			  <div class="col-1 col-sm-1"><img src="images/iconoUser.png" width="71" height="71" alt=""/></div>
+		      <div class="col-2 col-sm-4" style="padding-left: 1.5em; vertical-align:middle;">bienvenido<br><h4>JEFE OPERADOR</h4></div>
+		      <div class="col-3 col-sm-2">&nbsp;</div>
+		      <div class="col-4 col-sm-4"><form class="form-inline" target="_blank" action="http://koha.adminkuhn.ch/cgi-bin/koha/opac-search.pl">
+        <input type="text" class="form-control mt-3 col-md-12" placeholder="Búscador procedimientos" name="q">
+        <!--<button type="submit" class="btn btn-primary mt-3 col-md-2">Buscar</button>-->
+      </form></div>
+		      <div class="col-1 col-sm-1"><img src="images/iconoSetting.png" width="35" height="36" alt=""/></div>
+			  <hr style="margin-top: 1.5em; margin-bottom: 1.7em;">
+			</div>
+			
+		<!-- seccion procedimientos -->
+			<div class="row row-cols-2" style="padding-bottom: 2.2em;">
+			  <div class="col"><h3>PROCEDIMIENTOS</h3></div>
+              <div class="col">&nbsp;</div>
+              <div class="col-6">Estadísticas de tickets ingresados / mes MAYO.2022</div>
+              <div class="col-6" style="text-align: right">Jueves 12 / 05 / 2022</div>
+			</div>
+			
+		<!-- seccion datos procedimientos -->	
+			<div class="row row-cols-4 rowDashboard">
+			  <div class="col-3 col-sm-5 colProcedColor"><h5>Total de tickets:</h5><h1>387</h1><hr>Total Alta: 43<br>Total Media: 129<br>Total Baja: 213</div>
+              <div class="col-2 colProcedColor" style="background-color: #FFD2D2;"><h1>12</h1>PENDIENTES<hr>Alta: 01<br>Media: 04<br>Baja: 07<br><a href="https://www.muruna.cl" class="btn btn-light btn-md btnCorner_det"  tabindex="-1" role="button" aria-disabled="true">ver detalles</a></div>
+              <div class="col-2 colProcedColor" style="background-color: #F9E8AD;"><h1>14</h1>EN PROCESO<hr>Alta: 02<br>Media: 06<br>Baja: 06<br><a href="https://www.muruna.cl" class="btn btn-light btn-md btnCorner_det"  tabindex="-1" role="button" aria-disabled="true">ver detalles</a></div>
+              <div class="col-2 colProcedColor" style="background-color: #B3DFC5;"><h1>360</h1>FINALIZADOS<hr>Alta: 40<br>Media: 120<br>Baja: 200<br><a href="https://www.muruna.cl" class="btn btn-light btn-md btnCorner_det"  tabindex="-1" role="button" aria-disabled="true">ver detalles</a></div>
+			</div>
+			
+		<!-- seccion turno -->	
+			<div class="row" style="padding-bottom: 2.2em;margin-top: 3em;">
+                <hr style="margin-top: 1.5em; margin-bottom: 1.7em;">
+                   <div class="row">
+			           <div class="col-9"><h4>TURNO en Tiempo Real</h4></div>
+                       <div class="col-3 text-end"><p style="font-size: 0.9em"><a href="Operario_dashb.html" style="text-decoration: none; margin-right: 0.5em;">Limpiar turno</a><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi2 bi-exclamation-diamond" viewBox="0 0 16 16">
+  <path d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.482 1.482 0 0 1 0-2.098L6.95.435zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z"/>
+  <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+</svg></p></div>
+                   </div>
+                <hr style="margin-top: 1em; margin-bottom: 0.5em;">
+			</div>
+            
+          <div class="row row-cols-5 gx-1">
+                <div class="col-1"><img src="images/icono_Inspectores.png" width="92" height="93" alt=""/></div>
+                <div class="col-2 text-wrap" style="margin-left: 1.5em">Inspectores en Turno<br><h2>12</h2></div>
+                <div class="col-1"><img src="images/icono_Moviles.png"></div>
+                <div class="col-2 text-wrap" style="margin-left: 1.5em">Móviles en Turno<br><h2>05</h2></div>
+                <div class="col-4 text-start">
+                    <div class="row">
+                        <div class="col"><p style="font-size: 0.7em"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi2 bi-person-plus" viewBox="0 0 16 16">
+  <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+  <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+</svg><a href="Operario_dashb.html" style="text-decoration: none; margin-left: 0.5em;">Agregar Inspector al turno</a></p></div></div>
+                    <div class="row">    
+                    <div class="col" style="font-size: 0.7em;"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi2 bi-person-x" viewBox="0 0 16 16">
+  <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+  <path fill-rule="evenodd" d="M12.146 5.146a.5.5 0 0 1 .708 0L14 6.293l1.146-1.147a.5.5 0 0 1 .708.708L14.707 7l1.147 1.146a.5.5 0 0 1-.708.708L14 7.707l-1.146 1.147a.5.5 0 0 1-.708-.708L13.293 7l-1.147-1.146a.5.5 0 0 1 0-.708z"/>
+</svg><a href="Operario_dashb.html" style="text-decoration: none; margin-left: 0.5em;">Quitar Inspector al turno</a></div></div>
+                    </div>
+                </div>
+
+            
+            <!-- seccion notas y mensajes -->	
+			<div class="row" style="padding-bottom: 1.5em;margin-top: 3em;">
+			  <div class="col"><h4>Notas y mensajes</h4></div>
+			</div>
+			<div class="row row-cols-3 gx-5">
+				<div class="col">
+					<div class="row row-cols-2 rowDashboard2">
+						<div class="col">Procedimiento<br>n.00003</div>
+				        <div class="col">Se ha asignado inspector BRUCE WAYNE / cambia a estado “en proceso”</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="row row-cols-2 rowDashboard2">
+						<div class="col">Procedimiento<br>n.00003</div>
+				        <div class="col">Se ha asignado inspector BRUCE WAYNE / cambia a estado “en proceso”</div>
+					</div>
+				</div>
+                <div class="col">
+					<div class="row row-cols-2 rowDashboard2">
+						<div class="col">Procedimiento<br>n.00003</div>
+				        <div class="col">Se ha asignado inspector BRUCE WAYNE / cambia a estado “en proceso”</div>
+					</div>
+				</div>
+            </div>
+
+			<!-- FIN -->	
+			
+		</div>
+	  </div>
+	</div>
+	
+</body>
+</html>

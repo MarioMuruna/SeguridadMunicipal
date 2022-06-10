@@ -1,0 +1,381 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dashboard_Operario</title>
+	<link rel="stylesheet" href="css/sistSeguridad.css">
+    <link href="css/sidebars.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+    </script>
+    
+    
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+	
+	<div class="container-fluid">
+	  <div class="row backTotal">
+	    <div class="col-sm-2 navCol">
+        <!-- seccion navegación -->
+            <div class="row">
+              <div class="col-12">
+                   <nav class="navbar-nav flex-column">
+                       <div class="flex-shrink-0">
+                           <a class="navbar-brand" href="Operario_dashb.html"><img src="images/Logologo.png" width="210" height="87" alt=""/></a>
+                           
+                           <ul class="list-unstyled" style="margin-top: 2em;">
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-left rounded collapsed text-white" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg>
+          PROCEDIMIENTOS
+        </button>
+        <div class="collapse show" id="home-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="tabla_pendientes.html" class="link-dark rounded text-white-50">Pendientes</a></li>
+            <li><a href="tabla_enproceso.html" class="link-dark rounded text-white-50">En Proceso</a></li>
+            <li><a href="tabla_finalizado.html" class="link-dark rounded text-white-50">Finalizados</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <a href="nuevo_procedimiento.html" class="btn btn-toggle align-items-left rounded text-white">
+          CREAR NUEVO PROCEDIMIENTO
+        </a>
+      </li>
+      <li class="border-top my-3"></li>
+    </ul>
+
+                     </div>
+                   </nav>
+              </div>
+            </div>
+          
+        </div>
+          
+          <!-- inicio dashboard -->	
+	    <div class="col-sm-10 dashCont">
+			
+		<!-- seccion usuario + buscador -->	
+			<div class="row align-items-start">
+			  <div class="col-1 col-sm-1"><img src="images/iconoUser.png" width="71" height="71" alt=""/></div>
+		      <div class="col-2 col-sm-2" style="padding-left: 1.5em; vertical-align:middle;">bienvenido<br><h4>OPERADOR.07</h4></div>
+		      <div class="col-3 col-sm-3">&nbsp;</div>
+		      <div class="col-4 col-sm-4"><form class="form-inline" target="_blank" action="http://koha.adminkuhn.ch/cgi-bin/koha/opac-search.pl">
+        <input type="text" class="form-control mt-3 col-md-12" placeholder="Búscador procedimientos" name="q">
+        <!--<button type="submit" class="btn btn-primary mt-3 col-md-2">Buscar</button>-->
+      </form></div>
+		      <div class="col-1 col-sm-1"><img src="images/iconoSetting.png" width="35" height="36" alt=""/></div>
+			  <div class="col-1 col-sm-1">f</div><hr style="margin-top: 1.5em; margin-bottom: 1.7em">
+			</div>
+			
+		<!-- seccion procedimientos -->
+			<div class="row row-cols-2" style="padding-bottom: 2.2em;">
+			  <div class="col"><h3>NUEVO PROCEDIMIENTO</h3></div>
+              <div class="col-6" style="text-align: right">Jueves 12 / 05 / 2022</div>
+			</div>
+			
+		<!-- seccion formulario nuevo procedimiento -->	
+          <div class="row row-cols-2 g-3" style="margin-bottom: 2em;">
+            <div class="col-mb-6 mb-3">
+               
+                <!-- numero recurrente -->	
+                <div class="container shadow rowDashboard_form">
+               <div class="row" style="padding-bottom: 0.7em">
+			     <div class="col">NÚMERO RECURRENTE *</div>
+			   </div>
+                <div class="row row-cols-4 g-2">
+			        <div class="col-md-2">
+                        <input class="form-control" type="text" placeholder="+56" aria-label="default">
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-select" aria-label="Seleccion Fijo-movil">
+                          <option selected>2</option>
+                          <option value="1">9</option>
+                        </select>
+                    </div>
+                    <div class="col-md-5"><input class="form-control" type="tel" placeholder="ej:77597094" aria-label="telefono recurrente"></div>
+                    <div class="col-md-2"><button class="btn btn-primary btn-md" type="submit">Buscar</button></div>
+			   </div>
+			</div>
+		        <!-- fin -->
+                
+              <!-- solicitante nuevo procedimiento -->	
+                <div class="container shadow rowDashboard" style="margin-top: 1.5em">
+                  <form class="row row-col-2 g-1 needs-validation" novalidate>
+                      <div class="mb-3" style="margin-top: 1.5em">
+                         <label for="validationCustom01" class="form-label">Nombre Solicitante *</label>
+                         <input type="text" class="form-control" id="validationCustom01" placeholder="ej: Ricardo Fuentes" required>
+                          <div class="valid-feedback">
+                            ¡correcto!
+                          </div>
+                      </div>
+                      <div class="mb-2">
+                         <label for="validationCustom02" class="form-label">Ubicación *</label>
+                         <input type="text" class="form-control" id="validationCustom02" placeholder="ej: Irarrazaval 4369 - Ñuñoa" required>
+                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                             <label class="form-check-label" for="flexCheckDefault" style="font-size:0.7em;">
+                                Interseccción
+                              </label>
+                      </div>
+                      <div class="row row-cols-2 g-1 mb-3">
+                          <div class="col-6">
+                               <input type="text" class="form-control" placeholder="Calle 01" aria-label="Calle 01" disabled>
+                          </div>
+                          <div class="col-6">
+                               <input type="text" class="form-control" placeholder="Calle 02" aria-label="Calle 02" disabled>
+                          </div>
+                      </div>
+                      <div class="row g-1">
+                          <div class="col-8 mb-3">
+                              <label for="validationCustom03" class="form-label">Cuadrante *</label>
+                              <select class="form-select" aria-label="Default select example">
+                                 <option selected>122</option>
+                                 <option value="1">124</option>
+                                 <option value="2">126</option>
+                                 <option value="3">128</option>
+                                 <option value="4">130</option>
+                                 <option value="5">132</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row row-col-2 g-1">
+                          <div class="col-6 mb-3">
+                                  <label for="validationCustom04" class="form-label">Fecha Recibo *</label>
+                                  <input type="date" class="form-control" placeholder="Date" aria-label="Date" aria-describedby="fecha-ingreso" required>
+                          </div>
+                          <div class="col-6 mb-3">
+                                    <label for="validationCustom05" class="form-label">Hora de Recibo *</label>
+                                  <input type="time" class="form-control" placeholder="Time" aria-label="Time" aria-describedby="hora-ingreso" required>
+                          </div>
+                      </div>
+                      <div class="row row-col-2 g-1">
+                          <div class="col-6 mb-3">
+                                  <label for="validationCustom06" class="form-label">Vía de Ingreso *</label>
+                                  <select class="form-select" aria-label="Default select example">
+                                 <option selected>CENCO</option>
+                                 <option value="1">Radio Operador</option>
+                                 <option value="2">Operador Telefonico</option>
+                              </select>
+                          </div>
+                          <div class="col-6 mb-3">
+                                 <label for="validationCustom07" class="form-label">Telefono *</label>
+                                 <input type="tel" class="form-control" placeholder="ej:&nbsp;77694092" aria-label="Telefono" aria-describedby="basic-addon1" required>
+                              <div class="form-check form-check-inline">       
+                              <input class="form-check-input" type="radio" id="telFijo" name="inlineRadioOptions" value="Fijo">
+                                     <label class="form-check-label" for="telFijo" style="font-size: 0.6em;">Tel. Fijo (+56 2)</label>
+                                  </div>
+                                  <div class="form-check form-check-inline"> 
+                                     <input class="form-check-input" type="radio" id="telMovil" name="inlineRadioOptions" value="Movil">
+                                     <label class="form-check-label" for="telMovil" style="font-size: 0.6em;">Tel. Movil (+56 9)</label>
+                                      </div>
+                          </div>
+                      </div>
+                      <div class="row g-1">
+                          <div class="mb-3">
+                              <label for="validationCustom08" class="form-label">Tipo de Procedimiento *</label>
+                              <select class="form-select" aria-label="Default select example">
+                                 <option selected>Corte de agua potable</option>
+                                 <option value="1">Corte de sistema eléctrico</option>
+                                 <option value="2">Colisión Vehicular</option>
+                                 <option value="3">Asalto a mano armada</option>
+                                 <option value="4">Robo con intimidación</option>
+                                 <option value="5">Disputa de vecinos</option>
+                                 <option value="6">Denuncia de microtráfico</option>
+                                 <option value="7">Denuncia Ruidos Molestos</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row row-col-2 g-1" style="margin-bottom: 1em;">
+                          <div class="col-6 mb-3">
+                                  <label for="validationCustom09" class="form-label">Connotación Social *</label>
+                                  <select class="form-select" aria-label="Default select example">
+                                 <option selected>ALTA</option>
+                                 <option value="1">MEDIA</option>
+                                 <option value="2">BAJA</option>
+                              </select>
+                          </div>
+                          <div class="col-6 mb-3 g-3">
+                            <label for="validationCustom07" class="form-label">Informe Jefe Turno</label><br>
+                          <div class="form-check form-check-inline">       
+                            <input class="form-check-input" type="radio" id="Si" name="inlineRadioOptions" value="Fijo">
+                                     <label class="form-check-label" for="Si" style="font-size: 0.6em;">SI</label>
+                            </div>
+                                  <div class="form-check form-check-inline"> 
+                                     <input class="form-check-input" type="radio" id="No" name="inlineRadioOptions" value="Movil">
+                                     <label class="form-check-label" for="No" style="font-size: 0.6em;">NO</label>
+                            </div>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+                <!-- fin -->
+                </div>
+            <div class="col-mb-5">
+               <div class="container shadow rowDashboard">
+               <form class="row row-col-2 g-1 needs-validation" novalidate>
+                <div class="row g-2">
+                    <div class="mb-3">
+                        <label for="validationCustom10" class="form-label">Descripción *</label>
+                        <textarea class="form-control" id="validationCustom10" name="validationMensaje" rows="3" min="25" style="background-color: #ECECEC;" required></textarea>
+                           <div class="form-check form-check-inline "> 
+                              <input class="form-check-input" type="checkbox" id="AddInspectores" name="inlineCheckbox" value="Agregar Inspectores">
+                              <label class="form-check-label" for="AddInspectores" style="font-size: 0.6em;">Agregar Insectores</label>
+                           </div>
+                    </div>
+			   </div>
+                     <div class="row g-1">
+                          <div class="mb-3">
+                              <label for="validationCustom11" class="form-label">Inspector Responsable *</label>
+                              <select class="form-select" aria-label="Default select example">
+                                 <option selected>Bruce Wayne</option>
+                                 <option value="1">Alfredo Pérez</option>
+                                 <option value="2">Domingo Arévalo</option>
+                                 <option value="3">Francisca Hervera</option>
+                                 <option value="4">Nicolas Fernández</option>
+                                 <option value="5">Camila Sotomayor</option>
+                                 <option value="6">Nicole Belgrano</option>
+                                 <option value="7">Mario Sánchez</option>
+                              </select>
+                          </div>
+                      </div>
+                   <div class="row row-cols-1 g-1">
+			          <div class="col-12" style="font-size: 0.8em" >Inspectores de apoyo (opcional/solo muestra disponibles)</div>
+			       </div>
+                   <div class="row row-cols-1 g-1">
+			          <div class="mb-3" style="font-size: 0.8em">
+                          <table class="table"> 
+                              <tbody>
+    <tr>
+      <td>
+          <input class="form-check-input" type="checkbox" id="AddInspector01" name="inlineCheckbox" value="Agregar Inspectores">
+          <label class="form-check-label" for="AddInspector01">Ricardo Tapia</label>
+      </td>
+      <td>
+          <input class="form-check-input" type="checkbox" id="AddInspector02" name="inlineCheckbox" value="Agregar Inspectores">
+          <label class="form-check-label" for="AddInspector02">Fernando Montenegro</label>
+      </td>
+      <td>
+          <input class="form-check-input" type="checkbox" id="AddInspector03" name="inlineCheckbox" value="Agregar Inspectores">
+          <label class="form-check-label" for="AddInspector03">Denisse Corvalán</label>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <input class="form-check-input" type="checkbox" id="AddInspector04" name="inlineCheckbox" value="Agregar Inspectores">
+          <label class="form-check-label" for="AddInspector04">Rocío Marengo</label>
+      </td>
+      <td>
+          <input class="form-check-input" type="checkbox" id="AddInspector05" name="inlineCheckbox" value="Agregar Inspectores">
+          <label class="form-check-label" for="AddInspector05">Santiago Aránguiz</label>
+      </td>
+      <td>
+          <input class="form-check-input" type="checkbox" id="AddInspector06" name="inlineCheckbox" value="Agregar Inspectores">
+          <label class="form-check-label" for="AddInspector06">Iván Zamorano</label>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <input class="form-check-input" type="checkbox" id="AddInspector07" name="inlineCheckbox" value="Agregar Inspectores">
+          <label class="form-check-label" for="AddInspector07">Javiera Chau</label>
+      </td>
+      <td>
+          <input class="form-check-input" type="checkbox" id="AddInspector08" name="inlineCheckbox" value="Agregar Inspectores">
+          <label class="form-check-label" for="AddInspector08">Antonella Riquelme</label>
+      </td>
+      <td>
+          <!--<input class="form-check-input" type="checkbox" id="AddInspector09" name="inlineCheckbox" value="Agregar Inspectores">
+          <label class="form-check-label" for="AddInspector09">Tomás Valdebenito</label>-->
+      </td>
+    </tr>
+</tbody>
+                          </table>
+                      </div>
+			       </div>
+                   <div class="row row-col-2 g-1" style="font-size: 0.85em">
+                          <div class="col-5 mb-2">
+                                  <label for="fechaEntrega" class="form-label">Fecha entrega</label>
+                                  <input type="date" class="form-control" placeholder="Date" aria-label="Date" aria-describedby="fecha-entrega">
+                     </div>
+                          <div class="col-5 mb-2">
+                                    <label for="horaEntrega" class="form-label">Hora entrega</label>
+                                  <input type="time" class="form-control" placeholder="Time" aria-label="Time" aria-describedby="hora-entrega">
+                     </div>
+                       <div class="col-5 mb-2">
+                                  <label for="fechaEntrega" class="form-label">Fecha arribo</label>
+                                  <input type="date" class="form-control" placeholder="Date" aria-label="Date" aria-describedby="fecha-entrega">
+                     </div>
+                          <div class="col-5 mb-2">
+                                    <label for="horaEntrega" class="form-label">Hora arribo</label>
+                                  <input type="time" class="form-control" placeholder="Time" aria-label="Time" aria-describedby="hora-entrega">
+                     </div>
+                       <div class="col-5 mb-2">
+                                  <label for="fechaEntrega" class="form-label">Fecha término</label>
+                                  <input type="date" class="form-control" placeholder="Date" aria-label="Date" aria-describedby="fecha-entrega">
+                     </div>
+                          <div class="col-5 mb-2">
+                                    <label for="horaEntrega" class="form-label">Hora término</label>
+                                  <input type="time" class="form-control" placeholder="Time" aria-label="Time" aria-describedby="hora-entrega">
+                     </div>
+                 </div>
+                <div class="row g-2">
+                    <div class="mb-3">
+                        <label for="resultado" class="form-label">Resultado procedimiento</label>
+                        <textarea class="form-control" id="resultado" name="validationMensaje" rows="5" min="25" style="background-color: #ECECEC;"></textarea>
+                    </div>
+			    </div>
+                   <div class="row row-col-2 g-1">
+                          <div class="col-7 mb-2">
+                              <button class="btn btn-secondary float-end" type="reset" style="font-size: 0.8em;">CANCELAR</button>
+                          </div>
+                          <div class="col-5 mb-2">
+                              <button class="btn btn-success float-end" type="submit" style="font-size: 0.8em;">AGREGAR PROCEDIMIENTO</button>
+                          </div>
+                      </div>
+                   </form>
+                   
+                   
+                   
+			</div>
+		    </div>  
+          </div>
+            
+            <!-- seccion notas y mensajes -->	
+
+
+			<!-- FIN -->	
+			
+		</div>
+	  </div>
+	</div>
+	
+</body>
+</html>

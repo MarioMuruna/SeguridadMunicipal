@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dashboard_Operario</title>
+	<link rel="stylesheet" href="css/sistSeguridad.css">
+    <link href="css/sidebars.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+	
+	<div class="container-fluid">
+	  <div class="row backTotal">
+	    <div class="col-sm-2 navCol">
+        <!-- seccion navegación -->
+            <div class="row">
+              <div class="col-12">
+                   <nav class="navbar-nav flex-column">
+                       <div class="flex-shrink-0">
+                           <a class="navbar-brand" href="Operario_dashb.html"><img src="images/Logologo.png" width="210" height="87" alt=""/></a>
+                           
+                           <ul class="list-unstyled" style="margin-top: 2em;">
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-left rounded collapsed text-white" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg>
+          PROCEDIMIENTOS
+        </button>
+        <div class="collapse show" id="home-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="tabla_pendientes.html" class="link-dark rounded text-white-50">Pendientes</a></li>
+            <li><a href="tabla_enproceso.html" class="link-dark rounded text-white-50">En Proceso</a></li>
+            <li><a href="tabla_finalizado.html" class="link-dark rounded text-white-50">Finalizados</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <a href="nuevo_procedimiento.html" class="btn btn-toggle align-items-left rounded text-white">
+          CREAR NUEVO PROCEDIMIENTO
+        </a>
+      </li>
+      <li class="border-top my-3"></li>
+    </ul>
+
+                     </div>
+                   </nav>
+              </div>
+            </div>
+          
+        </div>
+          
+          <!-- inicio dashboard -->	
+	    <div class="col-sm-10 dashCont">
+			
+		<!-- seccion usuario + buscador -->	
+			<form class="form-inline" target="_blank" action="http://koha.adminkuhn.ch/cgi-bin/koha/opac-search.pl"><div class="row align-items-start">
+			  <div class="col-1 col-sm-1"><img src="images/iconoUser.png" width="71" height="71" alt=""/></div>
+		      <div class="col-2 col-sm-2" style="padding-left: 1.5em; vertical-align:middle;">bienvenido<br><h4>OPERADOR.07</h4></div>
+		      <div class="col-2 col-sm-2">&nbsp;</div>
+		      <div class="col-4 col-sm-4">
+        <input type="text" class="form-control mt-3" placeholder="Búscador procedimientos" name="q">
+      </div>
+		      <div class="col-2 col-sm-2"><button type="submit" class="btn btn-primary mt-3">Buscar</button></div>
+			  <div class="col-1 col-sm-1">f</div><hr style="margin-top: 1.5em; margin-bottom: 1.7em">
+			</div></form>
+			
+		<!-- seccion procedimientos -->
+            <div class="row row-cols-2">
+              <div class="mb-2"><h3>PROCEDIMIENTOS</h3></div>
+              <div class="col">&nbsp;</div>
+            </div>
+            
+			<div class="row row-cols-2 g-5" style="padding-bottom: 2.2em;">
+              <div class="col-3">
+                  <div class="row">
+                    <div class="col"><p style="background-color: #FFD2D2; border-radius: 7px; padding: 2px">&nbsp;Estado PENDIENTES / Total: 13</p></div>
+                  </div>
+                  <div class="row accionProcedimiento" style="margin-top: 1.2em;">
+                    <div class="col-2"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+</svg></div>
+                      <div class="col-4"><span>Editar Procedimiento</span></div>
+                  </div>
+                  <div class="row accionProcedimiento" style="margin-top: 0.7em;">
+                    <div class="col-2"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+  <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+  <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+</svg></div>
+                      <div class="col-4"><span>Eliminar Procedimiento</span></div>
+                  </div><hr>
+              </div>
+              <div class="col-9">
+                  <!-- ficha procedimiento -->
+                  <div class="row shadow rowDashboard">
+                      <div class="mb-3">
+                          <div class="row g-2">
+                              <div class="col-2 text-start">Ticket Número:</div>
+                              <div class="col-4 text-start">00017</div>
+                              <div class="col-2 text-start">Fecha Ingreso:</div>
+                              <div class="col-4 text-start">06/03/2022</div>
+                          </div>
+                          <div class="row g-2">
+                              <div class="col-2 text-start">Operador:</div>
+                              <div class="col-4 text-start">Diego Pérez</div>
+                              <div class="col-2 text-start">Hora Ingreso:</div>
+                              <div class="col-4 text-start">23:45</div>
+                          </div>
+                      </div>
+                      <div class="border-top border-bottom mb-2">
+                          <div class="col-12">
+                              <table class="table table-borderless">
+  <thead>
+    <tr class="txt_tabla">
+      <th scope="col">Vía Ingreso</th>
+      <th scope="col">Nombre Recurrente</th>
+      <th scope="col">Teléfono Recurrente</th>
+      <th scope="col">Nivel de Criticidad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="txt_tablaCont">
+      <th scope="row">CENCO</th>
+      <td>Mario Chau D.</td>
+      <td>+56 9 77694092</td>
+      <td class="social_alto">ALTO</td>
+    </tr>
+        </tbody>
+</table>
+                          </div>
+                      </div>
+                      <div class="mb-3">
+                          <div class="row g-3 align-items-end" style="margin-top: 0.05em;">
+                              <div class="col-2 text-start" style="line-height: 1em;">Tipo Procedimiento:</div>
+                              <div class="col-4 text-start txt_tabla">Daño propiedad privada</div>
+                              <div class="col-2 text-start">Descripción:</div>
+                              <div class="col-4 text-start txt_tabla">Vándalos cercanos a residencia se encuentran rallando muros.</div>
+                          </div>
+                          <div class="row g-3 align-items-end" style="margin-top: 0.3em; margin-bottom: 0.5em;">
+                              <div class="col-2 text-start" style="line-height: 1em;">Dirección Procedimiento:</div>
+                              <div class="col-4 text-start txt_tabla">Av. Irarrazaval 5569 Ñuñoa - Región Metropolitana</div>
+                              <div class="col-2 text-start">Cuadrante:</div>
+                              <div class="col-4 text-start txt_tabla">132</div>
+                          </div>
+                      </div>
+                      <div class="border-top border-bottom mb-2">
+                          <div class="col-12">
+                              <table class="table table-borderless">
+  <thead>
+    <tr class="txt_tabla">
+      <th scope="col">Radio Operador</th>
+      <th scope="col">Inspector Asignado</th>
+      <th scope="col">Insp. de Apoyo</th>
+      <th scope="col">Móviles</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="txt_tablaCont">
+      <th scope="row">No asignado</th>
+      <td>Bruce Wayne</td>
+      <td>Juan Pérez</td>
+      <td>C-01</td>
+    </tr>
+      <tr class="txt_tablaCont">
+      <th scope="row">&nbsp;</th>
+      <td>&nbsp;</td>
+      <td>Ricardo Cuevas</td>
+      <td>C-02</td>
+    </tr>
+        </tbody>
+</table>
+                          </div>
+                      </div>
+                      <div class="border-bottom mb-2">
+                          <div class="col-12">
+                              <table class="table table-borderless">
+  <thead>
+    <tr class="txt_tabla">
+      <th scope="col">Fecha Entrega</th>
+      <th scope="col">Fecha Arribo</th>
+      <th scope="col">Fecha Término</th>
+      <th scope="col">&nbsp;</th>
+      <th scope="col">&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="txt_tablaCont">
+      <th scope="row">06/03/2022</th>
+      <td>07/03/2022</td>
+      <td>07/03/2022</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+  <thead>
+    <tr class="txt_tabla">
+      <th scope="col">Hora Entrega</th>
+      <th scope="col">Hora Arribo</th>
+      <th scope="col">Hora Término</th>
+      <th scope="col">Tiempo Llegada</th>
+      <th scope="col">Tiempo Finalización</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="txt_tablaCont">
+      <th scope="row">23:45</th>
+      <td>00:12</td>
+      <td>01:37</td>
+      <td>0:27:00</td>
+      <td>1:25:00</td>
+    </tr>
+  </tbody>
+</table>
+                          </div>
+                      </div>
+                      <div class="mb-2">
+                          <div class="col-12">
+                              <table class="table table-borderless">
+  <thead>
+    <tr class="txt_tabla">
+      <th scope="col">Resultado Procedimiento</th>
+      <th scope="col">Informe Jefe Turno</th>
+      <th scope="col">Informe Número</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="txt_tablaCont">
+      <th scope="row">OK</th>
+      <td>NO</td>
+      <td>-------</td>
+    </tr>
+  </tbody>
+</table>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- ficha finalizado -->
+                  <div class="row row-cols-2" style="margin-top: 1.2em;">
+              <div class="col-6 col-sm-6 text-start"><a href="#" style="text-decoration: none"> << ver anterior </a></div>
+              <div class="col-6 col-sm-6 text-end"><a href="#" style="text-decoration: none"> ver siguiente >> </a></div>
+            </div>
+              </div>
+			</div>
+			
+
+			<!-- FIN -->	
+			
+		</div>
+	  </div>
+	</div>
+	
+</body>
+</html>

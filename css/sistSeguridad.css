@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/* CSS armado de plantilla */
+
+body {
+    font-family: "Lato", sans-serif !important;
+    color: #1B3871 !important;
+    }
+    
+
+.btn {
+    text-align: left !important;
+    line-height: 1.1 !important;
+    }
+
+.backTotal {
+	background: rgb(12,27,56);
+    background: linear-gradient(180deg, rgba(12,27,56,1) 0%, rgba(27,56,113,1) 100%);
+	padding-right: 1.5em;
+}
+
+.navCol {
+	padding: 4em 2em 50em 2em;
+    color: white;
+}
+
+.dashCont {
+    margin-top: 2em!important;
+	margin-bottom: 2em!important;
+	border-radius: 22px;
+	background-color: #F4F4F4;
+    padding: 3em 3em 1em 3em !important;
+}
+
+.rowDashboard {
+	border-radius: 18px; 
+	padding: 1.2em;
+	align-content: center;
+	background-color: white;
+	}
+
+.rowDashboard_form {
+	border-radius: 18px; 
+	padding: 1.2em;
+	align-content: center;
+	background-color: #EFF2FF;
+	}
+
+.rowDashboard2 {
+	border-radius: 10px; 
+	padding: 1em;
+	align-content: center;
+	background-color: white;
+	}
+
+.colProcedColor {
+	border-radius: 18px; padding: 1.2em; margin-right: 1em
+	}
+
+.btnCorner_det {
+	margin-top: 2em;
+	border-radius: 30px;
+	font-size: 0.8em;
+	width: 97%;
+	align-self: center;
+	}
+
+.bi2 {
+    vertical-align: none;
+    pointer-events: none;
+    fill: currentColor;
+}
+
+.accionProcedimiento {
+    line-height: 1.2em;
+    color: #777777;
+    font-size: 0.8em;
+    }
+
+/* tabla de datos */
+.txt_tabla {
+    text-align: left !important;
+    line-height: 1.1 !important;
+    font-size: 0.75em;
+    color: #1B3871!important;
+    }
+
+.txt_tablaCont {
+    text-align: left !important;
+    line-height: 1 !important;
+    font-size: 0.7em;
+    color: #292E46!important;
+    }
+
+.social_bajo {
+    background-color: #2E83D2!important;
+    color: white !important;
+    }
+.social_medio {
+    background-color: #E7AA4F!important;
+    color: white !important;
+    }
+.social_alto {
+    background-color: #D2412E!important;
+    color: white !important;
+    }
+
+.table {
+    vertical-align: middle!important;
+    }
