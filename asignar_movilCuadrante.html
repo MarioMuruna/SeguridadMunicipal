@@ -5,10 +5,18 @@
 <title>Dashboard_Operario</title>
 	<link rel="stylesheet" href="css/sistSeguridad.css">
     <link href="css/sidebars.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="dist/bootstrap-duallistbox.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="src/bootstrap-duallistbox.css">
+    
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="/path/to/cdn/jquery.slim.min.js"></script>
+<script src="dist/jquery.bootstrap-duallistbox.js"></script>
+<script src="src/jquery.bootstrap-duallistbox.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <style type="text/css">
 
 </style>
@@ -19,7 +27,7 @@
 	<div class="container-fluid">
 	  <div class="row backTotal">
 	    <div class="col-sm-2 navCol">
-        <!-- seccion navegación -->
+ <!-- seccion navegación -->
             <div class="row">
               <div class="col-12">
                    <nav class="navbar-nav flex-column">
@@ -96,7 +104,7 @@
       <li class="border-top my-3"></li>
       <li class="mb-1">
         <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-          Account
+          Buscador
         </button>
         <div class="collapse" id="account-collapse">
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -108,7 +116,6 @@
         </div>
       </li>
     </ul>
-                           
 
                      </div>
                    </nav>
@@ -123,91 +130,156 @@
 		<!-- seccion usuario + buscador -->	
 			<div class="row align-items-start">
 			  <div class="col-1 col-sm-1"><img src="images/iconoUser.png" width="71" height="71" alt=""/></div>
-		      <div class="col-2 col-sm-4" style="padding-left: 1.5em; vertical-align:middle;">bienvenido<br><h4>JEFE OPERADOR</h4></div>
-		      <div class="col-3 col-sm-2">&nbsp;</div>
-		      <div class="col-4 col-sm-4"><form class="form-inline" target="_blank" action="http://koha.adminkuhn.ch/cgi-bin/koha/opac-search.pl">
+		      <div class="col-2 col-sm-2" style="padding-left: 1.5em; vertical-align:middle;">bienvenido<br><h4>OPERADOR.07</h4></div>
+		      <div class="col-3 col-sm-3">&nbsp;</div>
+		      <div class="col-4 col-sm-4">
+                  <form class="form-inline" target="_blank" action="http://koha.adminkuhn.ch/cgi-bin/koha/opac-search.pl">
         <input type="text" class="form-control mt-3 col-md-12" placeholder="Búscador procedimientos" name="q">
         <!--<button type="submit" class="btn btn-primary mt-3 col-md-2">Buscar</button>-->
-      </form></div>
-		      <div class="col-1 col-sm-1"><img src="images/iconoSetting.png" width="35" height="36" alt=""/></div>
-			  <hr style="margin-top: 1.5em; margin-bottom: 1.7em;">
-			</div>
-			
-		<!-- seccion procedimientos -->
-			<div class="row row-cols-2" style="padding-bottom: 2.2em;">
-			  <div class="col"><h3>PROCEDIMIENTOS</h3></div>
-              <div class="col">&nbsp;</div>
-              <div class="col-6">Estadísticas de tickets ingresados / mes MAYO.2022</div>
-              <div class="col-6" style="text-align: right">Jueves 12 / 05 / 2022</div>
-			</div>
-			
-		<!-- seccion datos procedimientos -->	
-			<div class="row row-cols-4 shadow rowDashboard">
-			  <div class="col-3 col-sm-5 colProcedColor"><h5>Total de tickets:</h5><h1>387</h1><hr>Total Alta: 43<br>Total Media: 129<br>Total Baja: 213</div>
-              <div class="col-2 colProcedColor" style="background-color: #FFD2D2;"><h1>12</h1>PENDIENTES<hr>Alta: 01<br>Media: 04<br>Baja: 07<br><a href="https://www.muruna.cl" class="btn btn-light btn-md btnCorner_det"  tabindex="-1" role="button" aria-disabled="true">ver detalles</a></div>
-              <div class="col-2 colProcedColor" style="background-color: #F9E8AD;"><h1>14</h1>EN PROCESO<hr>Alta: 02<br>Media: 06<br>Baja: 06<br><a href="https://www.muruna.cl" class="btn btn-light btn-md btnCorner_det"  tabindex="-1" role="button" aria-disabled="true">ver detalles</a></div>
-              <div class="col-2 colProcedColor" style="background-color: #B3DFC5;"><h1>360</h1>FINALIZADOS<hr>Alta: 40<br>Media: 120<br>Baja: 200<br><a href="https://www.muruna.cl" class="btn btn-light btn-md btnCorner_det"  tabindex="-1" role="button" aria-disabled="true">ver detalles</a></div>
-			</div>
-			
-		<!-- seccion turno -->	
-			<div class="row" style="padding-bottom: 2.2em;margin-top: 2em;">
-                <hr style="margin-top: 1.2em; margin-bottom: 1.7em;">
-                   <div class="row">
-			           <div class="col-9"><h4>TURNO en Tiempo Real</h4></div>
-                       <div class="col-3"><div class="col text-end" style="font-size: 0.7em;"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi2 bi-exclamation-diamond" viewBox="0 0 16 16">
-  <path d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.482 1.482 0 0 1 0-2.098L6.95.435zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z"/>
-  <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
-</svg><a href="Operario_dashb.html" style="text-decoration: none; margin-left: 0.5em;" data-bs-toggle="modal" data-bs-target="#limpiarTurno">Limpiar turno</a></div></div>
-
-                   </div>
-                <hr style="margin-top: 1em; margin-bottom: 0.5em;">
-			</div>
-            
-          <div class="row row-cols-5 gx-2">
-                <div class="col-1"><img src="images/icono_Inspectores.png" width="92" height="93" alt=""/></div>
-                <div class="col-2 text-wrap" style="margin-left: 1.5em">Inspectores en Turno<br><h2>12</h2></div>
-                <div class="col-1"><img src="images/icono_Moviles.png" width="105" height="88" alt=""></div>
-                <div class="col-2 text-wrap" style="margin-left: 1.5em">Móviles en Turno<br><h2>05</h2></div>
-                <div class="col-4 justify-content-right">
-                    <div class="row">
-                        <div class="col"><p style="font-size: 0.7em"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi2 bi-person-plus" viewBox="0 0 16 16">
-  <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-  <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
-</svg><a href="tabla_inspectoresTurno.html" style="text-decoration: none; margin-left: 0.5em;">Agregar / Quitar Inspector al turno</a></p></div></div>
-                    <div class="row">
-                        <div class="col"><p style="font-size: 0.7em"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
-  <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
-</svg><a href="tabla_movilCuadrante.html" style="text-decoration: none; margin-left: 0.5em;">Listado de Inspectores en turno</a></p></div></div>
-
-                    </div>
+      </form>
                 </div>
-
-            
-            <!-- seccion notas y mensajes -->	
-			<div class="row" style="padding-bottom: 1.5em;margin-top: 3em;">
-			  <div class="col"><h4>Notas y mensajes</h4></div>
+		      <div class="col-1 col-sm-1"><img src="images/iconoSetting.png" width="35" height="36" alt=""/></div>
+			  <div class="col-1 col-sm-1">f</div><hr style="margin-top: 1.5em; margin-bottom: 1.7em">
 			</div>
-			<div class="row row-cols-3 gx-5 mb-3">
-				<div class="col">
-					<div class="row row-cols-2 rowDashboard2">
-						<div class="col">Procedimiento<br>n.00003</div>
-				        <div class="col">Se ha asignado inspector BRUCE WAYNE / cambia a estado “en proceso”</div>
-					</div>
-				</div>
-				<div class="col">
-					<div class="row row-cols-2 rowDashboard2">
-						<div class="col">Procedimiento<br>n.00003</div>
-				        <div class="col">Se ha asignado inspector BRUCE WAYNE / cambia a estado “en proceso”</div>
-					</div>
-				</div>
-                <div class="col">
-					<div class="row row-cols-2 rowDashboard2">
-						<div class="col">Procedimiento<br>n.00003</div>
-				        <div class="col">Se ha asignado inspector BRUCE WAYNE / cambia a estado “en proceso”</div>
-					</div>
-				</div>
+			
+		<!-- seccion titulo/fecha CUADRANTES -->
+			<div class="row row-cols-2" style="padding-bottom: 0.2em;">
+			  <div class="col-7"><h3>EDITAR MÓVIL / CUADRANTE</h3>
+			  </div>
+              <div class="col-3">&nbsp;</div>
             </div>
+             <div class="row row-cols-2" style="padding-bottom: 0.2em;">
+                <div class="col-7"><p>TURNO:&nbsp; Miércoles 15 / 06 / 2022</p>
+                </div>
+                 <div class="col-3">&nbsp;</div>
+              </div>
 
+			
+		<!-- seccion tabla cuadrantes -->	
+			<div class="row rowDashboard shadow">
+			  <div class="mb-3">
+                  <div class="row row-cols-2">
+                      <div class="col-sm-6"><h4>Inspector en Turno</h4><hr>
+                          <div class="row mb-3">
+                              <div class="col-sm-9">Nombre de Usuario</div>
+                              <div class="col-sm-3">&nbsp;</div>
+                          </div>
+                         <div class="row g-1">
+                              <div class="col-sm-2"><img src="images/iconoUser.png" width="71" height="71" alt=""/></div>
+                              <div class="col-sm-9"><h5>Fca_Montenegro</h5><span class="txt_Cont">Nombre completo: Francisca Montenegro Sanchez<br>RUT: 18.251.180-6</span></div>
+                        </div><hr>
+                        <div class="row row-col-2 g-2" style="margin-bottom: 1em;">
+                          <div class="col-5 mb-3">
+                                  <label for="validationCustom09" class="form-label">Móvil asignado</label>
+                                  <select class="form-select" aria-label="Default select example">
+                                 <option selected>C-01</option>
+                                 <option value="1">C-02</option>
+                                 <option value="2">C-03</option>
+                              </select>
+                          </div>
+                          <div class="col-5 mb-3">
+                                  <label for="validationCustom09" class="form-label">Rol en móvil</label>
+                                  <select class="form-select" aria-label="Default select example">
+                                 <option selected>Conductor</option>
+                                 <option value="1">Acompañante</option>
+                            </select>
+                          </div>
+                      </div>
+                          <div class="row">
+                          <div class="col-sm-10">Cuadrante responsable</div>
+                          </div>
+                          <div class="row">
+                          <div class="col-sm-10">Cuadrante responsable</div>
+                          </div>
+                           <div class="row">
+                          <div class="col-sm-10">Cuadrante de Apoyo</div>
+                          </div>
+                          <div class="row">
+                          <div class="col-sm-10">Cuadrante responsable</div>
+                          </div>
+                          
+                          
+                          
+                          
+                      </div>
+                      <div class="col-sm-6">
+                       <div class="container rowDashboard" style="background-color: #EEEEEE">
+                         <div class="col"><h5>Cuadrantes disponibles</h5><hr>RESPONSABLE
+                            <div class="row">
+                               <!-- listado cuadrantes responsable -->
+                                <form id="demoform" action="#" method="post">
+                                <div class="col txt_Cont">
+  <select multiple="multiple" size="10" name="duallistbox_demo1[]" title="duallistbox_demo1[]">
+    <option value="option1">121</option>
+    <option value="option2">122</option>
+    <option value="option3" selected="selected">123</option>
+    <option value="option4">124</option>
+    <option value="option5">125</option>
+    <option value="option6" selected="selected">126</option>
+    <option value="option7">127</option>
+    <option value="option8">128</option>
+    <option value="option9">129</option>
+    <option value="option0">130</option>
+  </select>
+  <br>
+  <button type="submit" class="btn btn-primary btn-block">Guardar Cuadrantes</button>
+                                </div>
+                                    </form>
+                                
+<script>
+  var demo1 = $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox();
+  $("#demoform").submit(function() {
+    alert($('[name="duallistbox_demo1[]"]').val());
+    return false;
+  });
+</script>
+                                
+                                
+                                <div class="col-sm-6"></div>
+                            </div><hr>APOYO
+                             <div class="row">
+                                 <!-- listado cuadrantes apoyo -->
+                                <form id="demoform2" action="#" method="post">
+                                <div class="col txt_Cont">
+  <select multiple="multiple" size="7" name="duallistbox_demo2[]" title="duallistbox_demo2[]">
+    <option value="option1">131</option>
+    <option value="option2">132</option>
+    <option value="option3" selected="selected">133</option>
+    <option value="option4">134</option>
+    <option value="option5">135</option>
+  </select>
+  <br>
+  <button type="submit" class="btn btn-secondary btn-block">Guardar Cuadrantes Apoyo</button>
+                                </div>
+                                </form>
+                                
+<script>
+  var demo1 = $('select[name="duallistbox_demo2[]"]').bootstrapDualListbox();
+  $("#demoform2").submit(function() {
+    alert($('[name="duallistbox_demo2[]"]').val());
+    return false;
+  });
+</script>
+                            </div>
+                         </div>
+                       </div>
+                      
+                      </div>
+                  </div>
+              
+
+
+                  
+                </div>
+			</div>
+			
+            <!-- paginacion -->	
+            <div class="row row-col-3" style="padding-bottom: 1em;margin-top: 2em; font-size: 0.7em;">
+			  <div class="col-3 text-start">Ver Anterior</div>
+                <div class="col-6 text-center">&nbsp;</div>
+                <div class="col-3 text-end">Siguientes</div>
+			</div>
+            			
 <!-- seccion fin-->
             
             <!-- Modal Nuevo Inspector -->
@@ -329,45 +401,7 @@
     </div>
   </div>
 </div>            
-     <!-- modal fin -->
-            
-            
-                        <!-- Modal Nuevo Inspector -->
-<div class="modal fade" id="limpiarTurno">
-  <div class="modal-dialog">
-    <div class="modal-content" style="margin-top: 10em;">
-
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h5 class="modal-title">LIMPIAR TURNO</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-              <div class="row row-col-2 g-2">            
-                      <div class="col-sm-2 mb-1" style="margin-top: 1em">
-                         <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
-  <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-</svg>
-                      </div>
-                      <div class="col-sm-10 mb-1" style="margin-top: 1em">
-                         <span>Esta acción removerá a todos los inspectores DEL TURNO, NO ELIMINARÁ ningún dato. Tampoco a ningún inspector ni móvil respectivo.</span>
-                      </div>
-              </div>
-      </div>
-
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary">Limpiar Turno</button>
-      </div>
-
-    </div>
-  </div>
-</div>            
-     <!-- modal fin --> 
-            
+     <!-- modal fin -->       
             
 			<!-- FIN -->	
 			

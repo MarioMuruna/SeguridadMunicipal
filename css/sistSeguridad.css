@@ -20,7 +20,7 @@ body {
 }
 
 .navCol {
-	padding: 4em 2em 50em 2em;
+	padding: 4em 2em 30em 2em;
     color: white;
 }
 
@@ -90,6 +90,13 @@ body {
     line-height: 1 !important;
     font-size: 0.7em;
     color: #292E46!important;
+    }
+
+.txt_Cont {
+    text-align: left !important;
+    line-height: 0.8em !important;
+    font-size: 0.8em;
+    color: #555555!important;
     }
 
 .social_bajo {
