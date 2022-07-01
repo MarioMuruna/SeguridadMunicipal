@@ -1,0 +1,440 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dashboard_Operario</title>
+	<link rel="stylesheet" href="css/sistSeguridad.css">
+    <link href="css/sidebars.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+	
+	<div class="container-fluid">
+	  <div class="row backTotal">
+	    <div class="col-sm-2 navCol">
+ <!-- seccion navegación -->
+            <div class="row">
+              <div class="col-12">
+                   <nav class="navbar-nav flex-column">
+                       <div class="flex-shrink-0">
+                           <a class="navbar-brand" href="JefeOperador_dashb.html"><img src="images/Logologo.png" width="210" height="87" alt=""/></a>
+                           
+                           <ul class="list-unstyled" style="margin-top: 2em;">
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed text-white" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg>
+          PROCEDIMIENTOS
+        </button>
+        <div class="collapse show" id="home-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="tabla_pendientes.html" class="link-dark rounded text-white-50">Pendientes</a></li>
+            <li><a href="tabla_enproceso.html" class="link-dark rounded text-white-50">En Proceso</a></li>
+            <li><a href="tabla_finalizado.html" class="link-dark rounded text-white-50">Finalizados</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <a href="nuevo_procedimiento.html" class="btn btn-toggle align-items-left rounded text-white">
+          CREAR NUEVO PROCEDIMIENTO
+        </a>
+       <!-- <div class="collapse" id="dashboard-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded text-white">Overview</a></li>
+            <li><a href="#" class="link-dark rounded text-white">Weekly</a></li>
+            <li><a href="#" class="link-dark rounded text-white">Monthly</a></li>
+            <li><a href="#" class="link-dark rounded text-white">Annually</a></li>
+          </ul>
+        </div> -->
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-left rounded collapsed text-white" data-bs-toggle="collapse" data-bs-target="#inspector-collapse" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg>
+          INSPECTORES
+        </button>
+        <div class="collapse" id="inspector-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded text-white-50" data-bs-toggle="modal" data-bs-target="#nuevoInspector">Agregar Nuevo</a></li>
+            <li><a href="#" class="link-dark rounded text-white-50">Listado Completo</a></li>
+          </ul>
+        </div>
+      </li>
+     <li class="mb-1">
+        <button class="btn btn-toggle align-items-left rounded collapsed text-white" data-bs-toggle="collapse" data-bs-target="#movil-collapse" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg>
+          MÓVILES
+        </button>
+        <div class="collapse" id="movil-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded text-white-50" data-bs-toggle="modal" data-bs-target="#nuevoMovil">Agregar Nuevo</a></li>
+            <li><a href="#" class="link-dark rounded text-white-50">Listado Completo</a></li>
+          </ul>
+        </div>
+      </li>
+    <li class="mb-1">
+        <button class="btn btn-toggle align-items-left rounded collapsed text-white" data-bs-toggle="collapse" data-bs-target="#turno-collapse" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg>
+          TURNOS
+        </button>
+        <div class="collapse" id="turno-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded text-white-50">Agregar/Quitar Inspector</a></li>
+            <li><a href="#" class="link-dark rounded text-white-50">Agregar/Quitar Móvil</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="border-top my-3"></li>
+      <li class="mb-1">
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+          Account
+        </button>
+        <div class="collapse" id="account-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-dark rounded">New...</a></li>
+            <li><a href="#" class="link-dark rounded">Profile</a></li>
+            <li><a href="#" class="link-dark rounded">Settings</a></li>
+            <li><a href="#" class="link-dark rounded">Sign out</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+
+                     </div>
+                   </nav>
+              </div>
+            </div>
+          
+        </div>
+          
+          <!-- inicio dashboard -->	
+	    <div class="col-sm-10 dashCont">
+			
+		<!-- seccion usuario + buscador -->	
+			<div class="row align-items-start">
+			  <div class="mb-3">Estadísticas Sistema de Seguridad<br><h5>mes JULIO 2022</h5></div><hr style="margin-top: 0.3em; margin-bottom: 1.7em">
+			</div>
+			
+		<!-- seccion titulo/fecha INSPECTORES -->
+			<div class="row row-cols-2" style="margin-bottom: 1.2em;">
+			  <div class="col-1"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-file-text" viewBox="0 0 16 16">
+  <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z"/>
+  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+</svg></div>
+                <div class="col-11"><h5>NÚMERO DE REPORTES<br> POR CUADRANTE CONNOTACIÓN SOCIAL</h5>
+			  </div>
+            </div>
+            
+
+			
+		<!-- seccion tabla procedimientos -->	
+			<div class="row rowDashboard shadow g-2">
+			  
+            <div class="col-10">
+        <table class="table table-responsive table-striped">
+        <thead>
+        <tr class="txt_tabla">
+            <th>Nombre Cuadrante</th>
+            <th><h6 style="color: #E21E04">•</h6>Alta</th>
+            <th><h6 style="color: #DA8300">•</h6>Media</th>
+            <th><h6 style="color: #ECBA0A">•</h6>Baja</th>
+            <th>Procedimiento más Reportado</th>
+            <th>Nombre más Recurrente</th>
+            <th>Número de Teléfono</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="txt_tablaCont">
+            <td>Clau_J.</td>
+            <td>01</td>
+            <td>00</td>
+            <td>05</td>
+            <td>Reclamo</td>
+            <td>Juan Pérez</td>
+            <td>+56 9 95932078</td>
+        </tr>
+        <tr class="txt_tablaCont">
+            <td>bWayne</td>
+            <td>03</td>
+            <td>02</td>
+            <td>01</td>
+            <td>Fiscalización</td>
+            <td>Francisco Sánchez</td>
+                <td>+56 9 95932078</td>
+        </tr>
+        <tr class="txt_tablaCont">
+            <td>Rvegeta</td>
+            <td>01</td>
+            <td>01</td>
+            <td>03</td>
+            <td>Veh. Mal estacionado</td>
+            <td>Ana Paredes</td>
+            <td>+56 9 95932078</td>
+        </tr>
+       <tr class="txt_tablaCont">
+            <td>Clau_J.</td>
+            <td>05</td>
+            <td>01</td>
+            <td>04</td>
+            <td>Ruidos molestos</td>
+            <td>Nicolás López</td>
+            <td>+56 9 95932078</td>
+        </tr>
+        <tr class="txt_tablaCont">
+            <td>bWayne</td>
+            <td>01</td>
+            <td>04</td>
+            <td>01</td>
+            <td>Veh. Mal estacionado</td>
+            <td>Sonia del Tránsito</td>
+            <td>+56 9 95932078</td>
+        </tr>        
+        <tr class="txt_tablaCont">
+            <td>Rvegeta</td>
+            <td>01</td>
+            <td>04</td>
+            <td>04</td>
+            <td>Fiscalización</td>
+            <td>Inelda Del Monte</td>
+            <td>+56 9 95932078</td>
+        </tr>
+        <tr class="txt_tablaCont">
+            <td>Clau_J.</td>
+            <td>02</td>
+            <td>02</td>
+            <td>03</td>
+            <td>Reclamo</td>
+            <td>Juan Pérez</td>
+            <td>+56 9 95932078</td>
+        </tr>
+        <tr class="txt_tablaCont">
+            <td>bWayne</td>
+            <td>02</td>
+            <td>01</td>
+            <td>04</td>
+            <td>Fiscalización</td>
+            <td>Valentina Hidalgo</td>
+            <td>+56 9 95932078</td>
+        </tr>        
+        <tr class="txt_tablaCont">
+            <td>Rvegeta</td>
+            <td>01</td>
+            <td>04</td>
+            <td>03</td>
+            <td>Ruidos molestos</td>
+            <td>Francisco Sánchez</td>
+            <td>+56 9 95932078</td>
+        </tr>
+        <tr class="txt_tablaCont">
+            <td>Clau_J.</td>
+            <td>01</td>
+            <td>02</td>
+            <td>01</td>
+            <td>Veh. Mal estacionado</td>
+            <td>Inelda Del Monte</td>
+            <td>+56 9 95932078</td>
+        </tr>
+             <tr class="txt_tablaCont">
+            <td>bWayne</td>
+            <td>01</td>
+            <td>02</td>
+            <td>01</td>
+            <td>Fiscalización</td>
+            <td>Sonia del Tránsito</td>
+            <td>+56 9 95932078</td>
+        </tr>      
+        <tr class="txt_tablaCont">
+            <td>Rvegeta</td>
+            <td>04</td>
+            <td>02</td>
+            <td>02</td>
+            <td>Reclamo</td>
+            <td>Nicolás López</td>
+            <td>+56 9 95932078</td>
+        </tr>
+        <tr class="txt_tablaCont">
+            <td>Clau_J.</td>
+            <td>05</td>
+            <td>01</td>
+            <td>02</td>
+            <td>Reclamo</td>
+            <td>Ana Paredes</td>
+            <td>+56 9 95932078</td>
+        </tr>
+             <tr class="txt_tablaCont">
+            <td>bWayne</td>
+            <td>02</td>
+            <td>02</td>
+            <td>01</td>
+            <td>Ruidos molestos</td>
+            <td>Inelda Del Monte</td>
+            <td>+56 9 95932078</td>
+        </tr>       
+        <tr class="txt_tablaCont">
+            <td>Rvegeta</td>
+            <td>01</td>
+            <td>01</td>
+            <td>03</td>
+            <td>Fiscalización</td>
+            <td>Valentina Hidalgo</td>
+            <td>+56 9 95932078</td>
+        </tr>
+        </tbody>
+        </table>
+            <!-- paginacion -->	
+                  
+                </div>
+                <div class="col-2 align-self-end">
+                    <div class="row row-col-3">
+                        <div class="col-4"><h4 style="color: #E21E04; line-height: 0.7em">06</h4>Alta</div>
+                        <div class="col-4"><h4 style="color: #DA8300; line-height: 0.7em">04</h4>Media</div>
+                        <div class="col-4"><h4 style="color: #ECBA0A; line-height: 0.7em">24</h4>Baja</div>
+                    </div>
+                    <div class="row row-col-2" style="margin-top: 0.7em">
+                       <div class="col-4">TOTAL:</div>
+                        <div class="col-8"><h3><b>34</b></h3></div>
+                    </div>
+                
+                </div>
+			</div>
+			
+<!-- seccion fin-->
+            
+            <!-- Modal Nuevo Inspector -->
+<div class="modal fade" id="nuevoInspector">
+  <div class="modal-dialog">
+    <div class="modal-content" style="margin-top: 10em;">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h5 class="modal-title">NUEVO INSPECTOR</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form class="row row-col-2 g-2 needs-validation" novalidate>
+                      <div class="mb-1" style="margin-top: 1em">
+                         <label for="validarUsername" class="form-label">Nombre de Usuario *</label>
+                         <input type="text" class="form-control" id="validarUsername" placeholder="ej: Rey Vegeta" required>
+                      </div>
+            <div class="row row-col-2 g-2">
+                          <div class="col-6 mb-2">
+                                 <label for="validarNames" class="form-label">Nombres *</label>
+                                 <input type="text" class="form-control" placeholder="ej:&nbsp;Francisca Isidora" aria-label="Names" aria-describedby="basic-addon1" required>
+                          </div>
+                          <div class="col-6 mb-2">
+                                 <label for="validarLastName" class="form-label">Apellidos *</label>
+                                 <input type="text" class="form-control" placeholder="ej:&nbsp;Montes Dinamarca" aria-label="LastName" aria-describedby="basic-addon1" required>
+                          </div>
+                      </div>
+                      <div class="row row-col-2 g-2">
+                          <div class="col-6 mb-2">
+                                 <label for="validarID" class="form-label">RUT *</label>
+                                 <input type="number" class="form-control" placeholder="ej:&nbsp;18271150-6" aria-label="ID" aria-describedby="basic-addon1" required>
+                          </div>
+                          <div class="col-6 mb-2">
+                                 <label for="validarEmail" class="form-label">Correo electrónico *</label>
+                                 <input type="email" class="form-control" placeholder="ej:&nbsp;fran.montes@gmail.com" aria-label="email" aria-describedby="basic-addon1" required>
+                          </div>
+                      </div>
+          </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Agregar usuario</button>
+      </div>
+
+    </div>
+  </div>
+</div>            
+     <!-- modal fin --> 
+            
+            
+<!-- Modal Nuevo Móvil -->
+<div class="modal fade" id="nuevoMovil">
+  <div class="modal-dialog">
+    <div class="modal-content" style="margin-top: 10em;">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h5 class="modal-title">NUEVO MÓVIL</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form class="row row-col-2 g-2 needs-validation" novalidate>
+                      <div class="mb-1" style="margin-top: 1em">
+                         <label for="validarCodigo" class="form-label">Código Móvil *</label>
+                         <input type="text" class="form-control" id="validarCodigo" placeholder="ej: M-001" required>
+                      </div>
+            <div class="row row-col-2 g-2">
+                          <div class="col-6 mb-2">
+                            <label for="validarTipoMovil" class="form-label">Tipo Móvil *</label>
+                              <select class="form-select" aria-label="Default select example">
+                                 <option selected>Moto</option>
+                                 <option value="1">Auto</option>
+                                 <option value="2">Camioneta</option>
+                              </select>
+                          </div>
+                          <div class="col-6 mb-2">
+                                 <label for="validarPatente" class="form-label">Patente *</label>
+                                 <input type="text" class="form-control" placeholder="ej:&nbsp;GJ-RW-29" aria-label="Patente" aria-describedby="basic-addon1" required>
+                          </div>
+                      </div>
+            <div class="row row-col-2 g-2">
+                          <div class="col-6 mb-2">
+                            <label for="validarMarca" class="form-label">Marca *</label>
+                              <select class="form-select" aria-label="Default select example">
+                                 <option selected>Chevrolet</option>
+                                 <option value="1">Chagan</option>
+                                 <option value="2">Jac</option>
+                                  <option value="3">Nissan</option>
+                                 <option value="4">Volkswagen</option>
+                              </select>
+                          </div>
+                          <div class="col-6 mb-2">
+                                 <label for="validarPatente" class="form-label">Modelo *</label>
+                                 <input type="text" class="form-control" placeholder="ej:&nbsp;TG Bencinera" aria-label="Modelo" aria-describedby="basic-addon1" required>
+                          </div>
+                      </div>
+            <div class="row g-2">
+                    <div class="mb-3">
+                        <label for="validarExtra" class="form-label">Descripción Extra *</label>
+                        <textarea class="form-control" id="validarExtra" name="validationMensaje" rows="3" min="25" style="background-color: #ECECEC;" required></textarea>
+                    </div>
+			   </div>
+          </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Agregar móvil</button>
+      </div>
+
+    </div>
+  </div>
+</div>            
+     <!-- modal fin -->
+			
+            <!-- FIN -->	
+			
+		</div>
+	  </div>
+	</div>
+	
+</body>
+</html>
