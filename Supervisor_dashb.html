@@ -289,11 +289,23 @@ $(function() {
 		<!-- seccion tiempos turno -->	
 			<div class="row" style="padding-bottom: 2.2em;margin-top: 2em;">
                 <hr style="margin-top: 1.2em; margin-bottom: 1.7em;">
-                   <div class="row">
-			           <div class="col-sm-6"><h5>TIEMPO DE ARRIBO PROMEDIO:</h5> {%for procedimiento_status in tiempo_promedio_llegada%} {{ procedimiento_status.elipsed_arribo_entrega__avg  }} {% endfor %}</div>
-                       <div class="col-sm-6"><h5>TIEMPO DE FINALIZACION PROMEDIO:</h5> {%for procedimiento_finalizacion in tiempo_promedio_finalizacion%} {{ procedimiento_finalizacion.elipsed_termino_entrega__avg  }} {% endfor %}</div>
-
+                   
+              <div class="row row-cols-6">
+			           <div class="col-sm-1"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+  <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+</svg></div>
+                       <div class="col-sm-2"><h6>TIEMPO DE LLEGADA PROMEDIO:</h6>
+                  </div>
+                       <div class="col-sm-3 float-left"><h3>00:18:51</h3></div>
+                       <div class="col-sm-1"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+  <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+</svg></div>
+                       <div class="col-sm-3"><h6>TIEMPO DE FINALIZACION PROMEDIO:</h6></div>
+                       <div class="col-sm-2 float-left"><h3>00:36:30</h3><a role="button" class="btn btn-primary" href="tiempos_Inspectores.html" style="font-size: 0.75em; vertical-align: middle;">ver detalle por inspector</a></div>
                    </div>
+                
                 <hr style="margin-top: 1em; margin-bottom: 0.5em;">
 			</div>
             
@@ -301,12 +313,13 @@ $(function() {
         <!-- seccion reportes categorias / connotacion -->
           <div class="row row-cols-2 rowDashboard_gnral2 gx-5">
                 <div class="col-sm-7">
-                    <div class="row">
-                        <div class="mb-2" style="line-height: 1.3em">Categoría<br>
-                        MÁS REPORTADAS</div>
+                    <div class="row row-cols-2 border-start border-5 border-danger">
+                        <div class="col-sm-8" style="line-height: 1.3em">Procedimientos de más<br>
+                        ALTA CONNOTACION SOCIAL</div>
+                        <div class="col-sm-4 align-middle"><a role="button" class="btn btn-primary" href="reportesXcuadrante.html" style="font-size: 0.75em; vertical-align: middle;">ver detalle</a></div>
                     </div>
                     
-                    <div class="row">
+                    <div class="row" style="margin-top: 1em">
                         <div class="mb-3">
         <table class="table table-responsive table-hover">
         <thead>
@@ -347,13 +360,13 @@ $(function() {
                         </div>
                     </div>
             
-            <div class="row row-cols-2">
-                        <div class="col-sm-8" style="line-height: 1.3em">Procedimientos<br>
-                        ALTA CONNOTACIÓN</div>
+            <div class="row row-cols-2 border-start border-5 border-primary" style="margin-top: 0.85em;">
+                        <div class="col-sm-8" style="line-height: 1.3em">5 Procedimientos más<br>
+                        REPORTADOS</div>
                 <div class="col-sm-4 align-middle"><a role="button" class="btn btn-primary" href="reportesXcuadrante.html" style="font-size: 0.75em; vertical-align: middle;">ver detalle</a></div>
                     </div>
             
-            <div class="row">
+            <div class="row" style="margin-top: 1em">
                         <div class="mb-3">
         <table class="table table-responsive table-hover">
         <thead>
@@ -366,34 +379,54 @@ $(function() {
         </thead>
         <tbody>
         <tr class="txt_tablaCont">
-            <td>Clau_J.</td>
-            <td>Claudio Jimenez</td>
-            <td>M-001</td>
-            <td>Conductor</td>
+            <td>Reclamo</td>
+            <td>04</td>
+            <td>00:16:27</td>
+            <td>00:26:45</td>
         </tr>
             <tr class="txt_tablaCont">
-            <td>Clau_J.</td>
-            <td>Claudio Jimenez</td>
-            <td>M-001</td>
-            <td>Conductor</td>
+            <td>Ruidos molestos</td>
+            <td>03</td>
+            <td>00:18:42</td>
+            <td>00:38:57</td>
         </tr>
             <tr class="txt_tablaCont">
-            <td>Clau_J.</td>
-            <td>Claudio Jimenez</td>
-            <td>M-001</td>
-            <td>Conductor</td>
+            <td>Veh. Mal estacionado</td>
+            <td>02</td>
+            <td>00:15:35</td>
+            <td>00:45:30</td>
+            </tr>
+            <tr class="txt_tablaCont">
+            <td>Sospechoso</td>
+            <td>02</td>
+            <td>00:22:16</td>
+            <td>00:32:05</td>
+            </tr>
+            <tr class="txt_tablaCont">
+            <td>Fiscalización</td>
+            <td>02</td>
+            <td>00:15:32</td>
+            <td>00:17:42</td>
+            </tr>
             <tr class="table-light" style="color: #1B3871">
             <td>TOTAL</td>
             <td>03</td>
             <td>00:20:02</td>
             <td>00:45:59</td>
         </tr>
-        </tr>
         </tbody>
         </table>
                         </div>
                     </div>
-        
+            
+            <div class="row">
+                        <div class="col-sm-1" style="color: #396AFF;"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-filetype-pdf" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522Zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234H3.362Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563v-2.707Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638H7.896Z"/>
+</svg></div>
+                        <div class="col-sm-11" style="line-height: 1.3em"><a href="" style="text-decoration: none;">DESCARGAR PDF</a><br>
+                        DASHBOARD COMPLETO</div>
+                    </div>
+        <!--  
         <div class="row row-cols-2">
                         <div class="col-sm-8" style="line-height: 1.3em">Gestión<br>
                       INSPECTORES</div>
@@ -440,7 +473,7 @@ $(function() {
         </table>
                         </div>
                     </div>
-        
+        -->
                     
                 </div>
                 <div class="col-sm-5 rowDashboard2" style="padding: 1em; line-height: 1.3em;">Número de reportes en "tiempo real" por CONNOTACIÓN SOCIAL
@@ -567,16 +600,6 @@ $(function() {
         </table>
                 </div>
                     </div>
-                    
-                    <div class="row" style="margin-top: 1.2em">
-                        <div class="col-sm-1" style="color: #396AFF;"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-filetype-pdf" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522Zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234H3.362Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563v-2.707Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638H7.896Z"/>
-</svg></div>
-                        <div class="col-sm-11" style="line-height: 1.3em"><a href="" style="text-decoration: none;">DESCARGAR PDF</a><br>
-                        DASHBOARD COMPLETO</div>
-                    </div>
-                    
-                    
                 
           </div>
 
